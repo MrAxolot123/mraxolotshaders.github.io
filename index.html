@@ -3,169 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MrAxolot Shaders | Official Minecraft Java Shader</title>
-    <!-- Google Fonts & FontAwesome Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>MrAxolot Shaders | Official Website</title>
     <style>
-        :root {
-            --bg-color: #0d0f12;
-            --card-bg: #161a22;
-            --accent-color: #ff424d; /* Patreon-inspired vibrant accent */
-            --accent-hover: #e03540;
-            --text-main: #f3f4f6;
-            --text-muted: #9ca3af;
-            --border-color: #242b35;
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-
         body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-        }
-
-        /* Header Navigation */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 18px 8%;
-            background: rgba(13, 15, 18, 0.85);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-color);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 20px;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            color: #fff;
-        }
-
-        .brand i { color: var(--accent-color); }
-
-        nav { display: flex; gap: 24px; align-items: center; }
-
-        nav a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: 600;
-            transition: color 0.2s;
-        }
-
-        nav a:hover { color: #fff; }
-
-        .btn-patreon {
-            background-color: var(--accent-color);
-            color: #fff !important;
-            padding: 8px 18px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: background 0.2s, transform 0.2s;
-        }
-
-        .btn-patreon:hover {
-            background-color: var(--accent-hover);
-            transform: translateY(-1px);
-        }
-
-        /* Hero Section */
-        .hero {
+            background-color: #0d0f12;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
             text-align: center;
-            padding: 100px 20px 60px;
-            max-width: 900px;
-            margin: 0 auto;
+            padding: 50px 20px;
+            margin: 0;
         }
-
-        .badge {
-            display: inline-block;
-            background: rgba(255, 66, 77, 0.1);
-            color: var(--accent-color);
-            font-size: 13px;
-            font-weight: 700;
-            padding: 6px 14px;
-            border-radius: 20px;
-            margin-bottom: 20px;
-            border: 1px solid rgba(255, 66, 77, 0.2);
-        }
-
-        .hero h1 {
-            font-size: 52px;
-            font-weight: 800;
-            line-height: 1.15;
-            letter-spacing: -1.5px;
-            margin-bottom: 20px;
-            background: linear-gradient(180deg, #FFFFFF 0%, #A1A1AA 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero p {
-            font-size: 18px;
-            color: var(--text-muted);
-            margin-bottom: 35px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn-main {
-            background-color: #fff;
-            color: #000;
-            padding: 14px 32px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: all 0.2s;
-        }
-
-        .btn-main:hover {
-            background-color: #e5e7eb;
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background-color: var(--card-bg);
-            color: #fff;
-            border: 1px solid var(--border-color);
-            padding: 14px 28px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: all 0.2s;
-        }
-
-        .btn-secondary:hover {
-            border-color: #4b5563;
-            transform: translateY(-2px);
-        }
-
-        /* Showcase Cards */
         .container {
-            max-width: 1100px;
+            max-width: 700px;
             margin: 0 auto;
-            padding: 60px 20px
+            background: #161a22;
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid #242b35;
+        }
+        h1 {
+            font-size: 36px;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+        p {
+            color: #9ca3af;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .btn-download {
+            background-color: #ff424d;
+            color: #ffffff;
+            padding: 16px 36px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            display: inline-block;
+            transition: 0.2s;
+        }
+        .btn-download:hover {
+            background-color: #e03540;
+        }
+        .features {
+            margin-top: 40px;
+            text-align: left;
+            background: #0d0f12;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .features h3 {
+            color: #ff424d;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>✨ MrAxolot Shaders</h1>
+        <p>Next-Generation Lighting & PBR Graphics for Minecraft Java Edition.</p>
+        
+        <a href="MrAxolotShader.zip" download class="btn-download">⬇️ Download Shader Pack</a>
+
+        <div class="features">
+            <h3>🌟 Features</h3>
+            <p>• Advanced Volumetric Lighting & Atmospheric Shadows<br>
+               • Full LabPBR & Water Reflection Support<br>
+               • High FPS Optimization for Iris & Sodium</p>
+        </div>
+    </div>
+
+</body>
+</html>
